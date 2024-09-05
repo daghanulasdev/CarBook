@@ -1,1 +1,1 @@
-41 ders bitti. social media id si string olmuþ db üzerinden deðiþtir.
+46 ders bitti. social media id si string olmuþ db üzerinden deðiþtir.
