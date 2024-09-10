@@ -371,8 +371,11 @@ namespace CarBook.Persistence.Migrations
 
             modelBuilder.Entity("CarBook.Domain.Entities.SocialMedia", b =>
                 {
-                    b.Property<string>("SocialMediaId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("SocialMediaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SocialMediaId"));
 
                     b.Property<string>("Icon")
                         .IsRequired()
@@ -404,6 +407,10 @@ namespace CarBook.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

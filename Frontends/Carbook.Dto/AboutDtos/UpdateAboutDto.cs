@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Domain.Entities
+namespace Carbook.Dto.AboutDtos
 {
-    public class Testimonial
+    public class UpdateAboutDto
     {
-        public int TestimonialId { get; set; }
-        public string Name { get; set; }
+        public int AboutId { get; set; }
         public string Title { get; set; }
-        public string Comment { get; set; }
+        public string Description { get; set; }
         public string ImageUrl { get; set; }
     }
 }

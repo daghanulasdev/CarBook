@@ -159,7 +159,8 @@ namespace CarBook.Persistence.Migrations
                 name: "SocialMedias",
                 columns: table => new
                 {
-                    SocialMediaId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    SocialMediaId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Icon = table.Column<string>(type: "nvarchar(max)", nullable: false)
@@ -175,6 +176,7 @@ namespace CarBook.Persistence.Migrations
                 {
                     TestimonialId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)

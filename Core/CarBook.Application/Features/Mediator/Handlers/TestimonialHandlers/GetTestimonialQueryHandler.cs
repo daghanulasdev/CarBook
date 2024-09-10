@@ -27,6 +27,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.TestimonialHandlers
             {
                 TestimonialId = x.TestimonialId,
                 Comment = x.Comment,
+                Name = x.Name,
                 ImageUrl = x.ImageUrl,
                 Title = x.Title
             }).ToList();

@@ -25,6 +25,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.TestimonialHandlers
             await _repository.CreateAsync(new Testimonial
             {
                 Comment = request.Comment,
+                Name = request.Name,
                 ImageUrl = request.ImageUrl,
                 Title = request.Title
             });

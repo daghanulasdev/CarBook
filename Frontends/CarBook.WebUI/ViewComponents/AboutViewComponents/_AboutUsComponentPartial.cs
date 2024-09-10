@@ -6,16 +6,16 @@ namespace CarBook.WebUI.ViewComponents.AboutViewComponents
 {
     public class _AboutUsComponentPartial : ViewComponent
     {
-        private readonly IHttpClientFactory _client;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public _AboutUsComponentPartial(IHttpClientFactory client)
+        public _AboutUsComponentPartial(IHttpClientFactory httpClientFactory)
         {
-            _client = client;
+            _httpClientFactory = httpClientFactory;
         }
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var client = _client.CreateClient();
+            var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("https://localhost:7210/api/Abouts");
             if (responseMessage.IsSuccessStatusCode)
             {
